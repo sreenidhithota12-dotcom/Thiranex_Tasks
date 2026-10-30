@@ -180,6 +180,9 @@ async function loadBlogs() {
 
             card.append(heading, content, author);
 
+            const actions = document.createElement("div");
+            actions.className = "blog-actions";
+
             // Edit and Delete buttons
             if (blog.author?._id === getUserId()) {
                 const edit = createButton("Edit", "btn-warning", () => {
@@ -209,7 +212,8 @@ async function loadBlogs() {
                     }
                 });
 
-                card.append(edit, remove);
+                actions.append(edit, remove);
+                card.appendChild(actions);
             }
 
             // Comment section
