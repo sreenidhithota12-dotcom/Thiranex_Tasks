@@ -1,42 +1,213 @@
+
+/* General Styling */
 body {
-    background-color: #f4f6f9;
-    font-family: Arial, sans-serif;
+    background: #f3f5f9;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #212529;
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    background: #172554 !important;
+    padding: 16px 30px;
 }
 
 .navbar-brand {
-    font-size: 24px;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
+/* Main Container */
+.container {
+    max-width: 1100px;
+    padding: 35px 20px;
+}
+
+/* Cards */
 .card {
     border: none;
-    border-radius: 12px;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
 }
 
+.card h3 {
+    font-weight: 650;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.form-control {
+    border: 1px solid #dce1e8;
+    border-radius: 8px;
+    padding: 11px 13px;
+    font-size: 15px;
+}
+
+.form-control:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 7px;
+    padding: 9px 16px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Blog Section */
+#blogSection > h3 {
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+/* Blog Cards */
 .blog-card {
-    background: white;
-    border-radius: 12px;
-    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #e9edf3;
+    border-radius: 14px;
+    padding: 24px;
     height: 100%;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    transition: 0.25s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.09);
 }
 
 .blog-card h4 {
-    color: #212529;
-    font-weight: bold;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #172554;
 }
 
 .blog-content {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4b5563;
     white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    margin-bottom: 18px;
+}
+
+.blog-card small {
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* Blog Action Buttons */
+.blog-card .btn {
+    margin-right: 6px;
+    margin-top: 12px;
+}
+
+/* Comments */
+.comment-box {
+    background: #f3f6fb;
+    border-left: 3px solid #3b82f6;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 6px;
+}
+
+.comment-box strong {
+    color: #172554;
+    font-size: 14px;
+}
+
+.comment-box p {
+    margin: 5px 0 0;
+    color: #475569;
     overflow-wrap: anywhere;
 }
 
-.comment-box {
-    background: #f1f3f5;
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 10px;
-}
-
+/* Textarea */
 textarea {
     resize: vertical;
+    min-height: 130px;
+}
+
+/* Messages */
+#blogMessage,
+#authMessage {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 22px 15px;
+    }
+
+    .navbar {
+        padding: 12px 16px;
+    }
+
+    .navbar-brand {
+        font-size: 21px;
+    }
+
+    .blog-card {
+        padding: 18px;
+    }
+
+    #blogSection > h3 {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-card .btn {
+        padding: 7px 11px;
+        font-size: 13px;
+    }
+
+    .blog-card h4 {
+        font-size: 19px;
+    }
+}
+
+/* Author and action buttons */
+.blog-card small {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+/* Separate button row */
+.blog-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+    margin-bottom: 18px;
+}
+
+.blog-actions .btn {
+    margin: 0;
+    min-width: 75px;
+    padding: 9px 18px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.blog-actions .btn-warning {
+    color: #212529;
+}
+
+.blog-actions .btn-danger {
+    background-color: #dc3545;
 }
