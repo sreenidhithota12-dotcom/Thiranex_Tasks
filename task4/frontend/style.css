@@ -1,0 +1,42 @@
+body {
+    background-color: #f4f6f9;
+    font-family: Arial, sans-serif;
+}
+
+.navbar-brand {
+    font-size: 24px;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 12px;
+    padding: 22px;
+    height: 100%;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.blog-card h4 {
+    color: #212529;
+    font-weight: bold;
+}
+
+.blog-content {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.comment-box {
+    background: #f1f3f5;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+textarea {
+    resize: vertical;
+}
